@@ -1,0 +1,19 @@
+
+.container{
+    border: ;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    padding-top: 20vw;
+}
+
+h1,
+p {
+    display: flex; 
+    justify-content: center;
+    align-items: center;    
+}
+

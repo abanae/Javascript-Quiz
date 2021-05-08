@@ -16,6 +16,7 @@
         <p>Try to answer the following code-related questions within the time given.The incorrect answers will penalize
             your time by 5 seconds!</p>
     </div>
+
     <div class="container">
         <div id="question-container" class="hiden">
             <div id="question">Question</div>
@@ -25,13 +26,24 @@
                 <button id="btn3">Answer 3</button>
                 <button id="btn4">Answer 4</button>
             </div>
+
             <div class="controls">
                 <button id="startbtn">Start Quiz</button>
                 <button id="submitScore">Submit Score</button>
             </div>
+
+            <div id="highscore">
+                <h3>Score:</h3>
+                <h3>User initials</h3>
+                <input type="text" size="40" placeholder="Enter you initials for high score" name="intials"/>
+                <button id="playAgain">Play Again</button>
+                <button id="clearHighscore">Clear Highscore</button>
+                <button id="scores">View high scores</button>
+            </div>
         </div>
     </div>
 
+    <div id="answers"></div>
 
     <script src="./assets/css/script.js"></script>
 </body>

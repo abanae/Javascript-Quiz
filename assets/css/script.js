@@ -26,6 +26,7 @@ let questions = [{
 }
 ]
 
+// Function for timer & score
 let score = 0;
 let currentQuestion = -1;
 let timeLeft = 0;

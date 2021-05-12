@@ -15,3 +15,16 @@
     border-radius: 5px;
     margin: 50px;
 }
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}

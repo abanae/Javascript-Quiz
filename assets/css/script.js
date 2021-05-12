@@ -120,3 +120,30 @@ function rightAnswer() {
     next();
 }
 
+//Function for Loops
+function next() {
+    currentQuestion++;
+
+    if (currentQuestion > questions.length - 1) {
+        endGame();
+        return;
+    }
+
+    let quizContent = "<h2>" + questions[currentQuestion].title + "</h2>"
+
+    for (let buttonLoop = 0; buttonLoop < questions[currentQuestion].choices.length; buttonLoop++) {
+        let buttonCode = "<button onclick=\"[ANS]\">[CHOICE]</button>";
+        buttonCode = buttonCode.replace("[CHOICE]", questions[currentQuestion].choices[buttonLoop]);
+        if (questions[currentQuestion].choices[buttonLoop] == questions[currentQuestion].answer) {
+            buttonCode = buttonCode.replace("[ANS]", "rightAnswer()");
+        } else {
+            buttonCode = buttonCode.replace("[ANS]", "wrongAnswer()");
+        }
+        quizContent += buttonCode
+    }
+
+
+    document.getElementById("quizBody").innerHTML = quizContent;
+}
+
+

@@ -90,3 +90,22 @@ function clearScore() {
 
     resetGame();
 }
+
+//Function Reset 
+function resetGame() {
+    clearInterval(timer);
+    score = 0;
+    currentQuestion = -1;
+    timeLeft = 0;
+    timer = null;
+
+    document.getElementById("timeLeft").innerHTML = timeLeft;
+
+    let quizContent = 
+`<h1>JavaScript Quiz</h1>
+<h3>Click to play!</h3>
+<button onclick="start()">Start!</button>`;
+
+    document.getElementById("quizBody").innerHTML = quizContent;
+}
+

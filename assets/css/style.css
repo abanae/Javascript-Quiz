@@ -1,19 +1,9 @@
-
-.container{
-    border: ;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+/* Universal Commands */
+*{
+    margin: 3px;
+    padding:0;  
+    background-color: white;
+    font-family: Garamond, sans-serif;
 }
 
-h1{
-    padding-top: 20vw;
-}
-
-h1,
-p {
-    display: flex; 
-    justify-content: center;
-    align-items: center;    
-}
 

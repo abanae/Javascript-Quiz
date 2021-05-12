@@ -14,6 +14,7 @@
     border: 10px solid #e743b6;
     border-radius: 5px;
     margin: 50px;
+    padding: 20px 25px;
 }
 
 .right {
@@ -40,7 +41,7 @@ a {
     width: 10vw;
     height: 2.5vw;
     }
-    
+
 /* Button Section */
 button {
     font-weight: bold;

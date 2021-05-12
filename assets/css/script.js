@@ -109,3 +109,14 @@ function resetGame() {
     document.getElementById("quizBody").innerHTML = quizContent;
 }
 
+//Functions for Results
+function wrongAnswer() {
+    timeLeft -= 10;
+    next();
+}
+
+function rightAnswer() {
+    score += 20;
+    next();
+}
+

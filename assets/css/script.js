@@ -48,3 +48,19 @@ function start() {
 
     next();
 }
+
+//Function to End Game 
+function endGame() {
+    clearInterval(timer);
+
+    let quizContent = `
+<h1>GAME OVER!</h1>
+<h3>Score of ` + score + ` /100!</h3>
+<h3>You got ` + score / 20 + ` questions correct!</h3>
+<label for="name" id="nameLabel">Initials:</label>
+<input type="text" id="name" placeholder="First Last"> 
+<button onclick="setScore()">Get score!</button>`;
+
+    document.getElementById("quizBody").innerHTML = quizContent;
+}
+

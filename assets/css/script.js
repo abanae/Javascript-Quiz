@@ -82,3 +82,11 @@ function getScore() {
 
     document.getElementById("quizBody").innerHTML = quizContent;
 }
+
+//Function Clear Score
+function clearScore() {
+    localStorage.setItem("highscore", "");
+    localStorage.setItem("highscoreName", "");
+
+    resetGame();
+}

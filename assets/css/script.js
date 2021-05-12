@@ -25,3 +25,25 @@ let questions = [{
     answer: "1"
 }
 ]
+
+let score = 0;
+let currentQuestion = -1;
+let timeLeft = 0;
+let timer;
+
+function start() {
+
+    timeLeft = 60;
+    document.getElementById("timeLeft").innerHTML = timeLeft;
+
+    timer = setInterval(function () {
+        timeLeft--;
+        document.getElementById("timeLeft").innerHTML = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            endGame();
+        }
+    }, 1000);
+
+    next();
+}

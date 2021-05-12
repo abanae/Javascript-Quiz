@@ -28,3 +28,9 @@ a {
     text-decoration: underline;
     color: black;
 }
+
+/* Quiz Content */
+#quizBody {
+    text-align: center;
+    padding: 12vh;
+}

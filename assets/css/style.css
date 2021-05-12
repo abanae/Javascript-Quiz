@@ -36,6 +36,11 @@ a {
     padding: 12vh;
 }
 
+h1,
+h2{
+    font-weight: bolder;
+}
+
 /* Placeholder Section */
 #name{
     width: 10vw;

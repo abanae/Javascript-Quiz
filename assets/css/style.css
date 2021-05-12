@@ -34,3 +34,19 @@ a {
     text-align: center;
     padding: 12vh;
 }
+
+/* Button Section */
+button {
+    font-weight: bold;
+    background-color: #cf1080;
+    color: rgb(15, 2, 2);
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-family: arial, sans-serif;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #ff80a4;
+    border-radius: 12px;
+}

@@ -103,7 +103,7 @@ function resetGame() {
 
     let quizContent = 
 `<h1>JavaScript Quiz</h1>
-<h3>Click to play!</h3>
+<h3>Click to Play Again!</h3>
 <button onclick="start()">Start!</button>`;
 
     document.getElementById("quizBody").innerHTML = quizContent;

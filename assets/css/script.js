@@ -1,3 +1,8 @@
+// Convert txt into object
+
+let allHighScores = JSON.parse(localStorage.getItem(`allHighScores`)) || []
+
+
 //Value of Questions    
 let questions = [{
     title: `Inside the HTML document, where do you place your JavaScript code?`,
@@ -64,33 +69,34 @@ function endGame() {
     document.getElementById("quizBody").innerHTML = quizContent;
 }
 
-let allHighScores = JSON.parse(localStorage.getItem(`allHighScores`))||[]
-
-
+// Convert setScore to string
 function setScore() {
     let newHighScore = {
-        initials:document.getElementById('name').value,
-        score:score
+        initials: document.getElementById('name').value,
+        score: score
     }
     allHighScores.push(newHighScore);
-    localStorage.setItem("allHighScores",JSON.stringify(allHighScores));
+    localStorage.setItem("allHighScores", JSON.stringify(allHighScores));
     getScore();
 }
 
-
+// Loop for scores
 function getScore() {
-//  loop throught all highscores array and renders this elements for each items
-    console.log();
-let quizContent = `
-<h2>` + localStorage.getItem("highscoreName") + `'s highscore is:</h2>
-<h1>` + localStorage.getItem("highscore") + `</h1><br> 
+    let quizBodyEl = document.getElementById("quizBody");
+    quizBodyEl.innerHTML = ""
+    for (let i = 0; i < allHighScores.length; i++) {
+        let newEl = document.createElement('div');
+        newEl.innerHTML = `
+<h2>${allHighScores[i].initials}'s highscore is:</h2>
+<h1>${allHighScores[i].score}</h1><br>`
+        quizBodyEl.append(newEl)
+    }
+    let newElBttn = document.createElement('div');
 
-<button onclick="clearScore()">Clear score!</button><button onclick="resetGame()">Play Again!</button>
-
-`;
-
-    document.getElementById("quizBody").innerHTML = quizContent;
+    newElBttn.innerHTML = `<button onclick="resetGame()">Play Again!</button>`;
+    quizBodyEl.append(newElBttn);
 }
+
 
 //Function Clear Score
 function clearScore() {
@@ -110,8 +116,8 @@ function resetGame() {
 
     document.getElementById("timeLeft").innerHTML = timeLeft;
 
-    let quizContent = 
-`<h1>JavaScript Quiz</h1>
+    let quizContent =
+        `<h1>JavaScript Quiz</h1>
 <h3>Click to Play Again!</h3>
 <button onclick="start()">Start!</button>`;
 
@@ -129,7 +135,7 @@ function rightAnswer() {
     next();
 }
 
-//Function for Loops
+//Function for Loops for questions
 function next() {
     currentQuestion++;
 

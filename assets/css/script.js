@@ -64,15 +64,24 @@ function endGame() {
     document.getElementById("quizBody").innerHTML = quizContent;
 }
 
+let allHighScores = JSON.parse(localStorage.getItem(`allHighScores`))||[]
+
+
 function setScore() {
-    localStorage.setItem("highscore", score);
-    localStorage.setItem("highscoreName", document.getElementById('name').value);
+    let newHighScore = {
+        initials:document.getElementById('name').value,
+        score:score
+    }
+    allHighScores.push(newHighScore);
+    localStorage.setItem("allHighScores",JSON.stringify(allHighScores));
     getScore();
 }
 
 
 function getScore() {
-    let quizContent = `
+//  loop throught all highscores array and renders this elements for each items
+    console.log();
+let quizContent = `
 <h2>` + localStorage.getItem("highscoreName") + `'s highscore is:</h2>
 <h1>` + localStorage.getItem("highscore") + `</h1><br> 
 

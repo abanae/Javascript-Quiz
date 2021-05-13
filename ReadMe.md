@@ -5,7 +5,14 @@ This is a quiz application using HTML, CSS, and Javascript. This application emp
 
 ## PROCESS:
 * 
-
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
 
 ## FINAL RESULTS:
 ![Javascript Quiz Screenshot](./assets/images/javascriptQuiz.PNG)

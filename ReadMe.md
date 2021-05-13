@@ -8,7 +8,7 @@
 
 
 ## FINAL RESULTS:
-![]()
+![Javascript Quiz Screenshot](./assets/images/javascriptQuiz.PNG)
 
 
 ### LINK TO DEPLOYED URL :

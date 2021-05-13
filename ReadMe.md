@@ -12,4 +12,4 @@
 
 
 ### LINK TO DEPLOYED URL :
-[Javascript Quiz](file:///C:/Users/freek/Desktop/Homework_4/index.html#)
+[Javascript Quiz](https://abanae.github.io/Javascript-Quiz/index.html)
